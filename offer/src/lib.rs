@@ -9,3 +9,5 @@ mod offer58;
 mod offer53_i;
 mod offer53_ii;
 mod offer04;
+mod offer11;
+mod offer50;
