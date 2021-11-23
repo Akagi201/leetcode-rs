@@ -11,3 +11,6 @@ mod offer53_ii;
 mod offer04;
 mod offer11;
 mod offer50;
+mod offer32_i;
+mod offer32_ii;
+mod offer32_iii;
