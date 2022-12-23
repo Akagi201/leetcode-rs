@@ -26,8 +26,13 @@ impl Solution {
     }
 }
 
-#[test]
-fn tests() {
-    let grid = vec![vec![1, 3, 1], vec![1, 5, 1], vec![4, 2, 1]];
-    assert_eq!(Solution::max_value(grid), 12);
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test() {
+        let grid = vec![vec![1, 3, 1], vec![1, 5, 1], vec![4, 2, 1]];
+        assert_eq!(Solution::max_value(grid), 12);
+    }
 }

@@ -2,7 +2,6 @@
 
 struct Solution;
 
-#[allow(unused)]
 impl Solution {
     pub fn translate_num(num: i32) -> i32 {
         const RADIX: u32 = 10;
@@ -31,7 +30,12 @@ impl Solution {
     }
 }
 
-#[test]
-fn tests() {
-    assert_eq!(Solution::translate_num(123), 3);
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test() {
+        assert_eq!(Solution::translate_num(123), 3);
+    }
 }

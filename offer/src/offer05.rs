@@ -1,7 +1,6 @@
 // https://leetcode.cn/problems/ti-huan-kong-ge-lcof/
 struct Solution;
 
-#[allow(unused)]
 impl Solution {
     pub fn replace_space(s: String) -> String {
         // s.replace(" ", "%20")
@@ -17,10 +16,15 @@ impl Solution {
     }
 }
 
-#[test]
-fn tests() {
-    assert_eq!(
-        Solution::replace_space("We are happy.".to_string()),
-        "We%20are%20happy.".to_string()
-    );
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test() {
+        assert_eq!(
+            Solution::replace_space("We are happy.".to_string()),
+            "We%20are%20happy.".to_string()
+        );
+    }
 }

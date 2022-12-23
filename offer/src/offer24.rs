@@ -31,15 +31,20 @@ impl Solution {
     }
 }
 
-#[test]
-fn tests() {
-    let a = Some(Box::new(ListNode {
-        val: 1,
-        next: Some(Box::new(ListNode { val: 2, next: None })),
-    }));
-    let b = Some(Box::new(ListNode {
-        val: 2,
-        next: Some(Box::new(ListNode { val: 1, next: None })),
-    }));
-    assert_eq!(Solution::reverse_list(a), b);
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test() {
+        let a = Some(Box::new(ListNode {
+            val: 1,
+            next: Some(Box::new(ListNode { val: 2, next: None })),
+        }));
+        let b = Some(Box::new(ListNode {
+            val: 2,
+            next: Some(Box::new(ListNode { val: 1, next: None })),
+        }));
+        assert_eq!(Solution::reverse_list(a), b);
+    }
 }

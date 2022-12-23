@@ -19,10 +19,15 @@ impl Solution {
     }
 }
 
-#[test]
-fn tests() {
-    assert_eq!(Solution::fib(2), 1);
-    assert_eq!(Solution::fib(3), 2);
-    assert_eq!(Solution::fib(4), 3);
-    assert_eq!(Solution::fib(45), 134903163);
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test() {
+        assert_eq!(Solution::fib(2), 1);
+        assert_eq!(Solution::fib(3), 2);
+        assert_eq!(Solution::fib(4), 3);
+        assert_eq!(Solution::fib(45), 134903163);
+    }
 }

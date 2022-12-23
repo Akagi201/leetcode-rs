@@ -9,7 +9,6 @@ pub struct ListNode {
     pub next: Option<Box<ListNode>>,
 }
 
-#[allow(unused)]
 impl ListNode {
     #[inline]
     fn new(val: i32) -> Self {
@@ -17,7 +16,6 @@ impl ListNode {
     }
 }
 
-#[allow(unused)]
 impl Solution {
     // pub fn reverse_print(head: Option<Box<list_node::ListNode>>) -> Vec<i32> leetcode 上提交需要改成这行
     pub fn reverse_print(head: Option<Box<ListNode>>) -> Vec<i32> {
@@ -32,21 +30,26 @@ impl Solution {
     }
 }
 
-#[test]
-fn tests() {
-    assert_eq!(Solution::reverse_print(None), vec![]);
-    assert_eq!(
-        Solution::reverse_print(Some(Box::new(ListNode { val: 2, next: None }))),
-        vec![2]
-    );
-    assert_eq!(
-        Solution::reverse_print(Some(Box::new(ListNode {
-            val: 1,
-            next: Some(Box::new(ListNode {
-                val: 3,
-                next: Some(Box::new(ListNode { val: 2, next: None })),
-            })),
-        }))),
-        vec![2, 3, 1]
-    );
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test() {
+        assert_eq!(Solution::reverse_print(None), vec![]);
+        assert_eq!(
+            Solution::reverse_print(Some(Box::new(ListNode { val: 2, next: None }))),
+            vec![2]
+        );
+        assert_eq!(
+            Solution::reverse_print(Some(Box::new(ListNode {
+                val: 1,
+                next: Some(Box::new(ListNode {
+                    val: 3,
+                    next: Some(Box::new(ListNode { val: 2, next: None })),
+                })),
+            }))),
+            vec![2, 3, 1]
+        );
+    }
 }

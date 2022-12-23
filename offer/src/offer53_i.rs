@@ -9,10 +9,15 @@ impl Solution {
     }
 }
 
-#[test]
-fn tests() {
-    assert_eq!(Solution::search(vec![], 0), 0);
-    assert_eq!(Solution::search(vec![1], 1), 1);
-    assert_eq!(Solution::search(vec![5, 7, 7, 8, 8, 10], 8), 2);
-    assert_eq!(Solution::search(vec![5, 7, 7, 8, 8, 10], 6), 0);
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test() {
+        assert_eq!(Solution::search(vec![], 0), 0);
+        assert_eq!(Solution::search(vec![1], 1), 1);
+        assert_eq!(Solution::search(vec![5, 7, 7, 8, 8, 10], 8), 2);
+        assert_eq!(Solution::search(vec![5, 7, 7, 8, 8, 10], 6), 0);
+    }
 }

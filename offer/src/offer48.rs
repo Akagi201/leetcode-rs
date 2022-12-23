@@ -29,44 +29,49 @@ impl Solution {
     }
 }
 
-#[test]
-fn tests() {
-    assert_eq!(
-        Solution::length_of_longest_substring("abcabcbb".to_string()),
-        3
-    );
-    assert_eq!(
-        Solution::length_of_longest_substring("bbbbb".to_string()),
-        1
-    );
-    assert_eq!(
-        Solution::length_of_longest_substring("pwwkew".to_string()),
-        3
-    );
-    assert_eq!(Solution::length_of_longest_substring("".to_string()), 0);
-    assert_eq!(Solution::length_of_longest_substring("au".to_string()), 2);
-    assert_eq!(Solution::length_of_longest_substring("dvdf".to_string()), 3);
-    assert_eq!(Solution::length_of_longest_substring("abba".to_string()), 2);
-    assert_eq!(Solution::length_of_longest_substring("aab".to_string()), 2);
-    assert_eq!(
-        Solution::length_of_longest_substring("abcabcbb".to_string()),
-        3
-    );
-    assert_eq!(
-        Solution::length_of_longest_substring("bbbbb".to_string()),
-        1
-    );
-    assert_eq!(
-        Solution::length_of_longest_substring("pwwkew".to_string()),
-        3
-    );
-    assert_eq!(Solution::length_of_longest_substring("".to_string()), 0);
-    assert_eq!(Solution::length_of_longest_substring("au".to_string()), 2);
-    assert_eq!(Solution::length_of_longest_substring("dvdf".to_string()), 3);
-    assert_eq!(Solution::length_of_longest_substring("abba".to_string()), 2);
-    assert_eq!(Solution::length_of_longest_substring("aab".to_string()), 2);
-    assert_eq!(
-        Solution::length_of_longest_substring("abcabcbb".to_string()),
-        3
-    );
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test() {
+        assert_eq!(
+            Solution::length_of_longest_substring("abcabcbb".to_string()),
+            3
+        );
+        assert_eq!(
+            Solution::length_of_longest_substring("bbbbb".to_string()),
+            1
+        );
+        assert_eq!(
+            Solution::length_of_longest_substring("pwwkew".to_string()),
+            3
+        );
+        assert_eq!(Solution::length_of_longest_substring("".to_string()), 0);
+        assert_eq!(Solution::length_of_longest_substring("au".to_string()), 2);
+        assert_eq!(Solution::length_of_longest_substring("dvdf".to_string()), 3);
+        assert_eq!(Solution::length_of_longest_substring("abba".to_string()), 2);
+        assert_eq!(Solution::length_of_longest_substring("aab".to_string()), 2);
+        assert_eq!(
+            Solution::length_of_longest_substring("abcabcbb".to_string()),
+            3
+        );
+        assert_eq!(
+            Solution::length_of_longest_substring("bbbbb".to_string()),
+            1
+        );
+        assert_eq!(
+            Solution::length_of_longest_substring("pwwkew".to_string()),
+            3
+        );
+        assert_eq!(Solution::length_of_longest_substring("".to_string()), 0);
+        assert_eq!(Solution::length_of_longest_substring("au".to_string()), 2);
+        assert_eq!(Solution::length_of_longest_substring("dvdf".to_string()), 3);
+        assert_eq!(Solution::length_of_longest_substring("abba".to_string()), 2);
+        assert_eq!(Solution::length_of_longest_substring("aab".to_string()), 2);
+        assert_eq!(
+            Solution::length_of_longest_substring("abcabcbb".to_string()),
+            3
+        );
+    }
 }

@@ -15,9 +15,14 @@ impl Solution {
     }
 }
 
-#[test]
-fn tests() {
-    assert_eq!(Solution::max_profit(vec![7, 1, 5, 3, 6, 4]), 5);
-    assert_eq!(Solution::max_profit(vec![1, 2, 3, 4, 5]), 4);
-    assert_eq!(Solution::max_profit(vec![7, 6, 4, 3, 1]), 0);
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test() {
+        assert_eq!(Solution::max_profit(vec![7, 1, 5, 3, 6, 4]), 5);
+        assert_eq!(Solution::max_profit(vec![1, 2, 3, 4, 5]), 4);
+        assert_eq!(Solution::max_profit(vec![7, 6, 4, 3, 1]), 0);
+    }
 }

@@ -17,9 +17,14 @@ impl Solution {
     }
 }
 
-#[test]
-fn tests() {
-    assert_eq!(Solution::find_repeat_number(vec![2, 3, 1, 0, 2, 5, 3]), 2);
-    assert_eq!(Solution::find_repeat_number(vec![2, 2]), 2);
-    assert_eq!(Solution::find_repeat_number(vec![2, 3]), 2);
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test() {
+        assert_eq!(Solution::find_repeat_number(vec![2, 3, 1, 0, 2, 5, 3]), 2);
+        assert_eq!(Solution::find_repeat_number(vec![2, 2]), 2);
+        assert_eq!(Solution::find_repeat_number(vec![2, 3]), 2);
+    }
 }

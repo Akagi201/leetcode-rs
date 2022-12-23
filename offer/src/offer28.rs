@@ -55,3 +55,17 @@ impl Solution {
             && Solution::is_symmetric_helper(&left.right, &right.left)
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test() {
+        assert_eq!(Solution::is_symmetric(None), true);
+        assert_eq!(
+            Solution::is_symmetric(Some(Rc::new(RefCell::new(TreeNode::new(1))))),
+            true
+        );
+    }
+}

@@ -53,31 +53,36 @@ impl Solution {
     }
 }
 
-#[test]
-fn tests() {
-    let root = Some(Rc::new(RefCell::new(TreeNode {
-        val: 3,
-        left: Some(Rc::new(RefCell::new(TreeNode {
-            val: 9,
-            left: None,
-            right: None,
-        }))),
-        right: Some(Rc::new(RefCell::new(TreeNode {
-            val: 20,
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test() {
+        let root = Some(Rc::new(RefCell::new(TreeNode {
+            val: 3,
             left: Some(Rc::new(RefCell::new(TreeNode {
-                val: 15,
+                val: 9,
                 left: None,
                 right: None,
             }))),
             right: Some(Rc::new(RefCell::new(TreeNode {
-                val: 7,
-                left: None,
-                right: None,
+                val: 20,
+                left: Some(Rc::new(RefCell::new(TreeNode {
+                    val: 15,
+                    left: None,
+                    right: None,
+                }))),
+                right: Some(Rc::new(RefCell::new(TreeNode {
+                    val: 7,
+                    left: None,
+                    right: None,
+                }))),
             }))),
-        }))),
-    })));
-    assert_eq!(
-        Solution::level_order(root),
-        vec![vec![3], vec![9, 20], vec![15, 7]]
-    );
+        })));
+        assert_eq!(
+            Solution::level_order(root),
+            vec![vec![3], vec![9, 20], vec![15, 7]]
+        );
+    }
 }

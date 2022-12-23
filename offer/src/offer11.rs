@@ -8,9 +8,14 @@ impl Solution {
     }
 }
 
-#[test]
-fn tests() {
-    assert_eq!(Solution::min_array(vec![3, 4, 5, 1, 2]), 1);
-    assert_eq!(Solution::min_array(vec![3, 3, 1, 3]), 1);
-    assert_eq!(Solution::min_array(vec![1, 3, 3]), 1);
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test() {
+        assert_eq!(Solution::min_array(vec![3, 4, 5, 1, 2]), 1);
+        assert_eq!(Solution::min_array(vec![3, 3, 1, 3]), 1);
+        assert_eq!(Solution::min_array(vec![1, 3, 3]), 1);
+    }
 }

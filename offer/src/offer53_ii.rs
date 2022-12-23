@@ -15,8 +15,13 @@ impl Solution {
     }
 }
 
-#[test]
-fn test() {
-    assert_eq!(Solution::missing_number(vec![3, 0, 1]), 2);
-    assert_eq!(Solution::missing_number(vec![9, 6, 4, 2, 3, 5, 7, 0, 1]), 8);
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test() {
+        assert_eq!(Solution::missing_number(vec![3, 0, 1]), 2);
+        assert_eq!(Solution::missing_number(vec![9, 6, 4, 2, 3, 5, 7, 0, 1]), 8);
+    }
 }

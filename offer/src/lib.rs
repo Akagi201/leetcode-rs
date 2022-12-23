@@ -1,4 +1,5 @@
 // import all modules
+#![allow(unused)]
 mod offer03;
 mod offer04;
 mod offer05;

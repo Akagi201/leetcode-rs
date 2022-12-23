@@ -21,7 +21,12 @@ impl Solution {
   }
 }
 
-#[test]
-fn tests() {
-  assert_eq!(Solution::num_ways(2), 2);
+#[cfg(test)]
+mod tests {
+  use super::*;
+
+  #[test]
+  fn test() {
+    assert_eq!(Solution::num_ways(2), 2);
+  }
 }

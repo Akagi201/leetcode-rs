@@ -49,11 +49,16 @@ impl Solution {
     }
 }
 
-#[test]
-fn tests() {
-    assert_eq!(Solution::level_order(None), vec![]);
-    assert_eq!(
-        Solution::level_order(Some(Rc::new(RefCell::new(TreeNode::new(3)))),),
-        vec![3]
-    );
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test() {
+        assert_eq!(Solution::level_order(None), vec![]);
+        assert_eq!(
+            Solution::level_order(Some(Rc::new(RefCell::new(TreeNode::new(3)))),),
+            vec![3]
+        );
+    }
 }

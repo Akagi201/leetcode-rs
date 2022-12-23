@@ -79,34 +79,39 @@ impl Solution {
     }
 }
 
-#[test]
-fn tests() {
-    assert!(Solution::is_sub_structure(
-        Some(Rc::new(RefCell::new(TreeNode {
-            val: 3,
-            left: Some(Rc::new(RefCell::new(TreeNode {
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test() {
+        assert!(Solution::is_sub_structure(
+            Some(Rc::new(RefCell::new(TreeNode {
+                val: 3,
+                left: Some(Rc::new(RefCell::new(TreeNode {
+                    val: 4,
+                    left: Some(Rc::new(RefCell::new(TreeNode {
+                        val: 1,
+                        left: None,
+                        right: None,
+                    }))),
+                    right: None,
+                }))),
+                right: Some(Rc::new(RefCell::new(TreeNode {
+                    val: 5,
+                    left: Some(Rc::new(RefCell::new(TreeNode {
+                        val: 1,
+                        left: None,
+                        right: None,
+                    }))),
+                    right: None,
+                }))),
+            }))),
+            Some(Rc::new(RefCell::new(TreeNode {
                 val: 4,
-                left: Some(Rc::new(RefCell::new(TreeNode {
-                    val: 1,
-                    left: None,
-                    right: None,
-                }))),
+                left: None,
                 right: None,
             }))),
-            right: Some(Rc::new(RefCell::new(TreeNode {
-                val: 5,
-                left: Some(Rc::new(RefCell::new(TreeNode {
-                    val: 1,
-                    left: None,
-                    right: None,
-                }))),
-                right: None,
-            }))),
-        }))),
-        Some(Rc::new(RefCell::new(TreeNode {
-            val: 4,
-            left: None,
-            right: None,
-        }))),
-    ));
+        ));
+    }
 }

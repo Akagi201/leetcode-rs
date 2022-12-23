@@ -18,8 +18,13 @@ impl Solution {
     }
 }
 
-#[test]
-fn tests() {
-    assert_eq!(Solution::first_uniq_char("leetcode".to_string()), 'l');
-    assert_eq!(Solution::first_uniq_char("loveleetcode".to_string()), 'v');
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test() {
+        assert_eq!(Solution::first_uniq_char("leetcode".to_string()), 'l');
+        assert_eq!(Solution::first_uniq_char("loveleetcode".to_string()), 'v');
+    }
 }

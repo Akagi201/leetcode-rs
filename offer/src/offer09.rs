@@ -38,19 +38,24 @@ impl CQueue {
  * obj.append_tail(value);
  * let ret_2: i32 = obj.delete_head();
  */
-#[test]
-fn tests() {
-    let mut obj = CQueue::new();
-    obj.append_tail(32);
-    assert_eq!(32, obj.delete_head());
-    assert_eq!(-1, obj.delete_head());
+#[cfg(test)]
+mod tests {
+    use super::*;
 
-    obj.append_tail(3);
-    assert_eq!(3, obj.delete_head());
-    assert_eq!(-1, obj.delete_head());
+    #[test]
+    fn test() {
+        let mut obj = CQueue::new();
+        obj.append_tail(32);
+        assert_eq!(32, obj.delete_head());
+        assert_eq!(-1, obj.delete_head());
 
-    obj.append_tail(5);
-    obj.append_tail(2);
-    assert_eq!(5, obj.delete_head());
-    assert_eq!(2, obj.delete_head());
+        obj.append_tail(3);
+        assert_eq!(3, obj.delete_head());
+        assert_eq!(-1, obj.delete_head());
+
+        obj.append_tail(5);
+        obj.append_tail(2);
+        assert_eq!(5, obj.delete_head());
+        assert_eq!(2, obj.delete_head());
+    }
 }

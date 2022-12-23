@@ -8,5 +8,15 @@ impl Solution {
     }
 }
 
-#[test]
-fn tests() {}
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test() {
+        assert_eq!(
+            Solution::reverse_left_words("abcdefg".to_string(), 2),
+            "cdefgab"
+        );
+    }
+}

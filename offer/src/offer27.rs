@@ -38,11 +38,16 @@ impl Solution {
     }
 }
 
-#[test]
-fn tests() {
-    assert_eq!(Solution::mirror_tree(None), None);
-    assert_eq!(
-        Solution::mirror_tree(Some(Rc::new(RefCell::new(TreeNode::new(1))))),
-        Some(Rc::new(RefCell::new(TreeNode::new(1))))
-    );
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test() {
+        assert_eq!(Solution::mirror_tree(None), None);
+        assert_eq!(
+            Solution::mirror_tree(Some(Rc::new(RefCell::new(TreeNode::new(1))))),
+            Some(Rc::new(RefCell::new(TreeNode::new(1))))
+        );
+    }
 }

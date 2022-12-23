@@ -51,11 +51,16 @@ impl Solution {
     }
 }
 
-#[test]
-fn tests() {
-    assert_eq!(
-        Solution::max_sub_array(vec![-2, 1, -3, 4, -1, 2, 1, -5, 4]),
-        6
-    );
-    assert_eq!(Solution::max_sub_array(vec![-2, 1]), 1);
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test() {
+        assert_eq!(
+            Solution::max_sub_array(vec![-2, 1, -3, 4, -1, 2, 1, -5, 4]),
+            6
+        );
+        assert_eq!(Solution::max_sub_array(vec![-2, 1]), 1);
+    }
 }
