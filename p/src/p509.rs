@@ -2,11 +2,27 @@
 struct Solution;
 
 impl Solution {
+    // simple recursive
+    // pub fn fib(n: i32) -> i32 {
+    //     if n < 2 {
+    //         return n;
+    //     }
+    //     Self::fib(n - 1) + Self::fib(n - 2)
+    // }
+
+    // Warning: This will overflow the 128-bit unsigned integer at n=186
     pub fn fib(n: i32) -> i32 {
-        if n < 2 {
-            return n;
+        // Use a and b to store the previous two values in the sequence
+        let mut a = 0;
+        let mut b = 1;
+        for _i in 0..n {
+            // As we iterate through, move b's value into a and the new computed
+            // value into b.
+            let c = a + b;
+            a = b;
+            b = c;
         }
-        Self::fib(n - 1) + Self::fib(n - 2)
+        a
     }
 }
 
