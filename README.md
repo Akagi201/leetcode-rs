@@ -6,5 +6,12 @@ Practice makes perfect.
 
 ## Problem Category
 
-- 剑指 Offer: [offer](offer/)
-- 主站：[p](p/)
+* 剑指 Offer: [offer](offer/)
+* 主站：[p](p/)
+
+## Refs
+
+* <https://github.com/TheAlgorithms/Rust>
+* <https://github.com/MDGSF/JustCoding>
+* <https://github.com/aylei/leetcode-rust>
+* <https://github.com/pymongo/leetcode-rust>
