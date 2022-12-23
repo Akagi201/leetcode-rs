@@ -1,4 +1,4 @@
-// https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof/
+// https://leetcode.cn/problems/qing-wa-tiao-tai-jie-wen-ti-lcof/
 
 struct Solution;
 

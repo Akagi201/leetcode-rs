@@ -1,28 +1,27 @@
-// https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-lcof/
+// https://leetcode.cn/problems/cong-shang-dao-xia-da-yin-er-cha-shu-lcof/
 
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 struct Solution;
 // Definition for a binary tree node.
 #[derive(Debug, PartialEq, Eq)]
 pub struct TreeNode {
-  pub val: i32,
-  pub left: Option<Rc<RefCell<TreeNode>>>,
-  pub right: Option<Rc<RefCell<TreeNode>>>,
+    pub val: i32,
+    pub left: Option<Rc<RefCell<TreeNode>>>,
+    pub right: Option<Rc<RefCell<TreeNode>>>,
 }
 
 #[allow(unused)]
 impl TreeNode {
-  #[inline]
-  pub fn new(val: i32) -> Self {
-    TreeNode {
-      val,
-      left: None,
-      right: None
+    #[inline]
+    pub fn new(val: i32) -> Self {
+        TreeNode {
+            val,
+            left: None,
+            right: None,
+        }
     }
-  }
 }
-
 
 #[allow(unused)]
 impl Solution {
@@ -53,5 +52,8 @@ impl Solution {
 #[test]
 fn tests() {
     assert_eq!(Solution::level_order(None), vec![]);
-    assert_eq!(Solution::level_order(Some(Rc::new(RefCell::new(TreeNode::new(3)))),), vec![3]);
+    assert_eq!(
+        Solution::level_order(Some(Rc::new(RefCell::new(TreeNode::new(3)))),),
+        vec![3]
+    );
 }

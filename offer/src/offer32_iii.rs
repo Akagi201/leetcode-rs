@@ -1,4 +1,4 @@
-// https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-iii-lcof/
+// https://leetcode.cn/problems/cong-shang-dao-xia-da-yin-er-cha-shu-iii-lcof/
 
 use std::cell::RefCell;
 use std::rc::Rc;
@@ -40,10 +40,10 @@ impl Solution {
             let mut tmp_res = std::collections::VecDeque::new(); // 每一层输出内容
             for node in queue {
                 let n1 = node.borrow();
-                if height %2 == 1 {
-                  tmp_res.push_back(n1.val);
+                if height % 2 == 1 {
+                    tmp_res.push_back(n1.val);
                 } else {
-                  tmp_res.push_front(n1.val);
+                    tmp_res.push_front(n1.val);
                 }
                 if n1.left.is_some() {
                     tmp.push(n1.left.clone().unwrap());

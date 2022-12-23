@@ -1,27 +1,27 @@
-// https://leetcode-cn.com/problems/dui-cheng-de-er-cha-shu-lcof/
+// https://leetcode.cn/problems/dui-cheng-de-er-cha-shu-lcof/
 
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 struct Solution;
 
 // Definition for a binary tree node.
 #[derive(Debug, PartialEq, Eq)]
 pub struct TreeNode {
-  pub val: i32,
-  pub left: Option<Rc<RefCell<TreeNode>>>,
-  pub right: Option<Rc<RefCell<TreeNode>>>,
+    pub val: i32,
+    pub left: Option<Rc<RefCell<TreeNode>>>,
+    pub right: Option<Rc<RefCell<TreeNode>>>,
 }
 
 #[allow(unused)]
 impl TreeNode {
-  #[inline]
-  pub fn new(val: i32) -> Self {
-    TreeNode {
-      val,
-      left: None,
-      right: None
+    #[inline]
+    pub fn new(val: i32) -> Self {
+        TreeNode {
+            val,
+            left: None,
+            right: None,
+        }
     }
-  }
 }
 
 #[allow(unused)]
@@ -36,7 +36,10 @@ impl Solution {
         Solution::is_symmetric_helper(&left, &right)
     }
 
-    pub fn is_symmetric_helper(left: &Option<Rc<RefCell<TreeNode>>>, right: &Option<Rc<RefCell<TreeNode>>>) -> bool {
+    pub fn is_symmetric_helper(
+        left: &Option<Rc<RefCell<TreeNode>>>,
+        right: &Option<Rc<RefCell<TreeNode>>>,
+    ) -> bool {
         if left.is_none() && right.is_none() {
             return true;
         }
@@ -48,6 +51,7 @@ impl Solution {
         if left.val != right.val {
             return false;
         }
-        Solution::is_symmetric_helper(&left.left, &right.right) && Solution::is_symmetric_helper(&left.right, &right.left)
+        Solution::is_symmetric_helper(&left.left, &right.right)
+            && Solution::is_symmetric_helper(&left.right, &right.left)
     }
 }

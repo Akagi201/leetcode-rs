@@ -1,33 +1,37 @@
-// https://leetcode-cn.com/problems/coin-change/
+// https://leetcode.cn/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof/
 
 struct Solution;
 
 #[allow(unused)]
 impl Solution {
-  pub fn coin_change(coins: Vec<i32>, amount: i32) -> i32 {
-    // dp[i] = min(dp[i], dp[i - coins[j]] + 1), dp[i] 表示组成面额 i 的最少硬币数
-    let mut dp = vec![amount + 1; amount as usize + 1];
-    dp[0] = 0;
-    for i in 1..=amount {
-      let mut min = amount + 1;
-      for &coin in coins.iter() {
-        if i >= coin {
-          min = min.min(dp[(i - coin) as usize]);
+    pub fn translate_num(num: i32) -> i32 {
+        const RADIX: u32 = 10;
+        let mut nums = num
+            .to_string()
+            .chars()
+            .flat_map(|c| c.to_digit(RADIX))
+            .collect::<Vec<u32>>();
+        let count = nums.len();
+        // dp[i] 表示 num[0..i] 的翻译结果的个数
+        // 状态转移方程：dp[i] = dp[i - 1] + dp[i - 2](如果 num[(i-1)..i] 可以翻译成一个数字)
+        let mut dp = vec![0; count];
+        dp[0] = 1; // 0 - 9 可以翻译成 1 种结果
+        for i in 1..count {
+            dp[i] = dp[i - 1]; // 最后一位一定可以翻译
+            let last2num = nums[i - 1] * 10 + nums[i];
+            if (10..=25).contains(&last2num) {
+                if i >= 2 {
+                    dp[i] += dp[i - 2]; // 前两位可以翻译成一个数字
+                } else {
+                    dp[i] += 1;
+                }
+            }
         }
-      }
-      dp[i as usize] = min + 1;
+        dp[count - 1]
     }
-    if dp[amount as usize] > amount {
-      -1
-    } else {
-      dp[amount as usize]
-    }
-  }
 }
 
 #[test]
 fn tests() {
-  assert_eq!(Solution::coin_change(vec![1, 2, 5], 11), 3);
-  assert_eq!(Solution::coin_change(vec![2], 3), -1);
-  assert_eq!(Solution::coin_change(vec![1, 2, 5], 100), 20);
+    assert_eq!(Solution::translate_num(123), 3);
 }

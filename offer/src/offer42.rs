@@ -1,4 +1,4 @@
-// https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/
+// https://leetcode.cn/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/
 
 struct Solution;
 
@@ -38,21 +38,24 @@ struct Solution;
 
 // DP 空间优化 4 ms, 2.7 MB
 impl Solution {
-  pub fn max_sub_array(nums: Vec<i32>) -> i32 {
-    if nums.is_empty() {
-      return 0;
+    pub fn max_sub_array(nums: Vec<i32>) -> i32 {
+        if nums.is_empty() {
+            return 0;
+        }
+        let (mut res, mut pre) = (i32::MIN, 0);
+        for n in nums {
+            pre = n.max(pre + n);
+            res = res.max(pre);
+        }
+        res
     }
-    let (mut res, mut pre) = (i32::MIN, 0);
-    for n in nums {
-      pre = n.max(pre+n);
-      res = res.max(pre);
-    }
-    res
-  }
 }
 
 #[test]
 fn tests() {
-  assert_eq!(Solution::max_sub_array(vec![-2,1,-3,4,-1,2,1,-5,4]), 6);
-  assert_eq!(Solution::max_sub_array(vec![-2,1]), 1);
+    assert_eq!(
+        Solution::max_sub_array(vec![-2, 1, -3, 4, -1, 2, 1, -5, 4]),
+        6
+    );
+    assert_eq!(Solution::max_sub_array(vec![-2, 1]), 1);
 }
