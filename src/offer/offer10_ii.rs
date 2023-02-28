@@ -6,9 +6,7 @@ pub struct Solution;
 #[allow(unused)]
 impl Solution {
 	pub fn num_ways(n: i32) -> i32 {
-		if n == 0 {
-			return 1
-		} else if n == 1 {
+		if n == 0 || n == 1 {
 			return 1
 		}
 		let mut dp = vec![0; n as usize + 1];
