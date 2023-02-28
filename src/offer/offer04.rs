@@ -1,6 +1,7 @@
-// https://leetcode.cn/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/
+/// 剑指 Offer 04. 二维数组中的查找
+/// <https://leetcode.cn/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/>
 
-struct Solution;
+pub struct Solution;
 
 impl Solution {
 	pub fn find_number_in2_d_array(matrix: Vec<Vec<i32>>, target: i32) -> bool {

@@ -1,6 +1,7 @@
-// https://leetcode.cn/problems/li-wu-de-zui-da-jie-zhi-lcof/
+/// 剑指 Offer 47. 礼物的最大价值
+/// <https://leetcode.cn/problems/li-wu-de-zui-da-jie-zhi-lcof/>
 
-struct Solution;
+pub struct Solution;
 
 #[allow(unused)]
 impl Solution {

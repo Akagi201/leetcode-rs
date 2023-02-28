@@ -1,7 +1,7 @@
-// https://leetcode.cn/problems/dui-cheng-de-er-cha-shu-lcof/
-
+/// 剑指 Offer 28. 对称的二叉树
+/// <https://leetcode.cn/problems/dui-cheng-de-er-cha-shu-lcof/>
 use std::{cell::RefCell, rc::Rc};
-struct Solution;
+pub struct Solution;
 
 // Definition for a binary tree node.
 #[derive(Debug, PartialEq, Eq)]

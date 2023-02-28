@@ -1,4 +1,5 @@
-// https://leetcode.cn/problems/bao-han-minhan-shu-de-zhan-lcof/
+/// 剑指 Offer 30. 包含 min 函数的栈
+/// <https://leetcode.cn/problems/bao-han-minhan-shu-de-zhan-lcof/>
 use std::cmp::min;
 struct MinStack {
 	stack: Vec<(i32, Option<i32>)>, // (value，前一个 min)

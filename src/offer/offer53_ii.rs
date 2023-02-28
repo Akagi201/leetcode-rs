@@ -1,6 +1,7 @@
-// https://leetcode.cn/problems/que-shi-de-shu-zi-lcof/
 #![allow(clippy::needless_range_loop)]
-struct Solution;
+/// 剑指 Offer 53 - II. 0～n-1 中缺失的数字
+/// <https://leetcode.cn/problems/que-shi-de-shu-zi-lcof/>
+pub struct Solution;
 
 #[allow(unused)]
 impl Solution {

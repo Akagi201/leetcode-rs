@@ -10,6 +10,14 @@ Practice makes perfect.
 * 主站：[p](src/p/)
 * 常用数据结构：[common](src/common)
 
+## View docs
+
+```sh
+cargo doc --open
+```
+
+Online docs: [Rust Doc](https://akagi201.github.io/leetcode-rs/leetcode/)
+
 ## Refs
 
 * <https://github.com/TheAlgorithms/Rust>

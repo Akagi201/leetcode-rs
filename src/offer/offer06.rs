@@ -1,6 +1,7 @@
-// https://leetcode.cn/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/
+/// 剑指 Offer 06. 从尾到头打印链表
+/// <https://leetcode.cn/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/>
 
-struct Solution;
+pub struct Solution;
 
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]

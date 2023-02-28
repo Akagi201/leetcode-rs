@@ -1,4 +1,5 @@
-// https://leetcode.cn/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/
+/// 剑指 Offer 09. 用两个栈实现队列
+/// <https://leetcode.cn/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/>
 
 struct CQueue {
 	s1: Vec<i32>,

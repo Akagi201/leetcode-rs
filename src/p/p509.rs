@@ -1,5 +1,6 @@
-// https://leetcode.cn/problems/fibonacci-number/
-struct Solution;
+/// 509. 斐波那契数
+/// <https://leetcode.cn/problems/fibonacci-number/>
+pub struct Solution;
 
 impl Solution {
 	// simple recursive

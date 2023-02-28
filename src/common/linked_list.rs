@@ -1,3 +1,4 @@
+/// LeetCode 里常用单链表
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
 pub struct ListNode {
@@ -11,7 +12,7 @@ impl ListNode {
 		ListNode { next: None, val }
 	}
 
-	/// 从 `Vec<i32>` 构建链表结构。建议使用宏 [`list!`](list)
+	/// 从 `Vec<i32>` 构建链表结构。建议使用宏 `list!`
 	pub fn from_vec(vec: Vec<i32>) -> Option<Box<ListNode>> {
 		vec_to_list(vec)
 	}

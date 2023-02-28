@@ -1,8 +1,8 @@
-// https://leetcode.cn/problems/shu-de-zi-jie-gou-lcof/
-
+/// 剑指 Offer 26. 树的子结构
+/// <https://leetcode.cn/problems/shu-de-zi-jie-gou-lcof/>
 use std::{cell::RefCell, rc::Rc};
 
-struct Solution;
+pub struct Solution;
 
 // Definition for a binary tree node.
 #[derive(Debug, PartialEq, Eq)]

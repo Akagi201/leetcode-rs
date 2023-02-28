@@ -1,6 +1,7 @@
-// https://leetcode.cn/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof/
+/// 剑指 Offer 46. 把数字翻译成字符串
+/// <https://leetcode.cn/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof/>
 
-struct Solution;
+pub struct Solution;
 
 #[allow(unused)]
 impl Solution {

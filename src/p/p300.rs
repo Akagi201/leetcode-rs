@@ -1,5 +1,6 @@
-// https://leetcode.cn/problems/longest-increasing-subsequence/
-struct Solution;
+/// 300. 最长递增子序列
+/// <https://leetcode.cn/problems/longest-increasing-subsequence/>
+pub struct Solution;
 
 impl Solution {
 	fn length_of_lis(nums: Vec<i32>) -> i32 {

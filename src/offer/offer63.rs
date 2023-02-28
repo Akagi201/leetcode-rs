@@ -1,6 +1,7 @@
-// https://leetcode.cn/problems/gu-piao-de-zui-da-li-run-lcof/
+/// 剑指 Offer 63. 股票的最大利润
+/// <https://leetcode.cn/problems/gu-piao-de-zui-da-li-run-lcof/>
 
-struct Solution;
+pub struct Solution;
 
 #[allow(unused)]
 impl Solution {

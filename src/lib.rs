@@ -1,8 +1,8 @@
 #![allow(unused)]
-// leetcode common data structure
+///  LeetCode 常用数据结构
 pub mod common;
 pub use common::{linked_list::*, tree_node::*};
-// 剑指 offer
-mod offer;
-// regular quiz
-mod p;
+/// 剑指 offer
+pub mod offer;
+/// 主站题目
+pub mod p;

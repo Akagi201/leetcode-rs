@@ -1,7 +1,8 @@
-// https://leetcode.cn/problems/shan-chu-lian-biao-de-jie-dian-lcof/
+/// 剑指 Offer 18. 删除链表的节点
+/// <https://leetcode.cn/problems/shan-chu-lian-biao-de-jie-dian-lcof/>
 use crate::ListNode;
 
-struct Solution;
+pub struct Solution;
 
 impl Solution {
 	pub fn delete_node(head: Option<Box<ListNode>>, val: i32) -> Option<Box<ListNode>> {

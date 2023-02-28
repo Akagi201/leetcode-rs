@@ -1,6 +1,7 @@
-// https://leetcode.cn/problems/fan-zhuan-lian-biao-lcof/
+/// 剑指 Offer 24. 反转链表
+/// <https://leetcode.cn/problems/fan-zhuan-lian-biao-lcof/>
 
-struct Solution;
+pub struct Solution;
 
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]

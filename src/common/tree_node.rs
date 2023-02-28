@@ -1,5 +1,6 @@
 use std::{cell::RefCell, rc::Rc};
 
+/// LeetCode 里常用树节点
 // Definition for a binary tree node.
 #[derive(Debug, PartialEq, Eq)]
 pub struct TreeNode {
@@ -14,7 +15,7 @@ impl TreeNode {
 		TreeNode { val, left: None, right: None }
 	}
 
-	/// 从 `Vec<Option<i32>>` 生成树结构。一般建议使用宏 [`tree!`](tree)
+	/// 从 `Vec<Option<i32>>` 生成树结构。一般建议使用宏 `tree!`
 	pub fn from_vec(vec: Vec<Option<i32>>) -> Option<Rc<RefCell<TreeNode>>> {
 		use std::collections::VecDeque;
 		let root = Some(Rc::new(RefCell::new(TreeNode::new(vec[0].unwrap()))));

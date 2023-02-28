@@ -1,8 +1,8 @@
-// https://leetcode.cn/problems/cong-shang-dao-xia-da-yin-er-cha-shu-iii-lcof/
-
+/// 剑指 Offer 32 - III. 从上到下打印二叉树 III
+/// <https://leetcode.cn/problems/cong-shang-dao-xia-da-yin-er-cha-shu-iii-lcof/>
 use std::{cell::RefCell, rc::Rc};
 
-struct Solution;
+pub struct Solution;
 
 // Definition for a binary tree node.
 #[derive(Debug, PartialEq, Eq)]

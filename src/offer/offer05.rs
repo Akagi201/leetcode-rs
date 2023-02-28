@@ -1,5 +1,7 @@
-// https://leetcode.cn/problems/ti-huan-kong-ge-lcof/
-struct Solution;
+/// 剑指 Offer 05. 替换空格
+/// <https://leetcode.cn/problems/ti-huan-kong-ge-lcof/>
+
+pub struct Solution;
 
 impl Solution {
 	pub fn replace_space(s: String) -> String {
