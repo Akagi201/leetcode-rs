@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"macro":[["list","Generate a linked list from a vec-like syntax."],["tree","Generate a tree structure from a vec-like syntax."]],"mod":[["common","LeetCode 常用数据结构"],["offer","剑指 offer"],["p","主站题目"]]};

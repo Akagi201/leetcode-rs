@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["Solution","剑指 Offer 47. 礼物的最大价值 https://leetcode.cn/problems/li-wu-de-zui-da-jie-zhi-lcof/"]]};
