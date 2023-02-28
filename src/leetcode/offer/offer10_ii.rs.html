@@ -38,31 +38,31 @@
 
 <span class="attr">#[allow(unused)]
 </span><span class="kw">impl </span>Solution {
-  <span class="kw">pub fn </span>num_ways(n: i32) -&gt; i32 {
-    <span class="kw">if </span>n == <span class="number">0 </span>{
-      <span class="kw">return </span><span class="number">1</span>;
-    } <span class="kw">else if </span>n == <span class="number">1 </span>{
-      <span class="kw">return </span><span class="number">1</span>;
-    }
-    <span class="kw">let </span><span class="kw-2">mut </span>dp = <span class="macro">vec!</span>[<span class="number">0</span>; n <span class="kw">as </span>usize + <span class="number">1</span>];
-    dp[<span class="number">0</span>] = <span class="number">1</span>;
-    dp[<span class="number">1</span>] = <span class="number">1</span>;
-    <span class="kw">for </span>i <span class="kw">in </span><span class="number">2</span>..=n {
-      <span class="kw">let </span>i = i <span class="kw">as </span>usize;
-      dp[i] = (dp[i - <span class="number">1</span>] + dp[i - <span class="number">2</span>])%<span class="number">1000000007</span>;
-    }
-    dp[n <span class="kw">as </span>usize]
-  }
+	<span class="kw">pub fn </span>num_ways(n: i32) -&gt; i32 {
+		<span class="kw">if </span>n == <span class="number">0 </span>{
+			<span class="kw">return </span><span class="number">1
+		</span>} <span class="kw">else if </span>n == <span class="number">1 </span>{
+			<span class="kw">return </span><span class="number">1
+		</span>}
+		<span class="kw">let </span><span class="kw-2">mut </span>dp = <span class="macro">vec!</span>[<span class="number">0</span>; n <span class="kw">as </span>usize + <span class="number">1</span>];
+		dp[<span class="number">0</span>] = <span class="number">1</span>;
+		dp[<span class="number">1</span>] = <span class="number">1</span>;
+		<span class="kw">for </span>i <span class="kw">in </span><span class="number">2</span>..=n {
+			<span class="kw">let </span>i = i <span class="kw">as </span>usize;
+			dp[i] = (dp[i - <span class="number">1</span>] + dp[i - <span class="number">2</span>]) % <span class="number">1000000007</span>;
+		}
+		dp[n <span class="kw">as </span>usize]
+	}
 }
 
 <span class="attr">#[cfg(test)]
 </span><span class="kw">mod </span>tests {
-  <span class="kw">use super</span>::<span class="kw-2">*</span>;
+	<span class="kw">use super</span>::<span class="kw-2">*</span>;
 
-  <span class="attr">#[test]
-  </span><span class="kw">fn </span>test() {
-    <span class="macro">assert_eq!</span>(Solution::num_ways(<span class="number">2</span>), <span class="number">2</span>);
-  }
+	<span class="attr">#[test]
+	</span><span class="kw">fn </span>test() {
+		<span class="macro">assert_eq!</span>(Solution::num_ways(<span class="number">2</span>), <span class="number">2</span>);
+	}
 }
 </code></pre></div>
 </section></div></main><div id="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="leetcode" data-themes="" data-resource-suffix="" data-rustdoc-version="1.67.1 (d5a82bbd2 2023-02-07)" data-search-js="search-444266647c4dba98.js" data-settings-js="settings-bebeae96e00e4617.js" data-settings-css="settings-af96d9e2fc13e081.css" ></div></body></html>
